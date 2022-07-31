@@ -1,8 +1,8 @@
 ﻿namespace EntityPriceComparator;
 
-public static class MockEntities
+public static class SeedEntities
 {
-    static MockEntities()
+    static SeedEntities()
     {
         Entities = new List<Entity>
         {
@@ -32,21 +32,11 @@ public static class MockEntities
                 Name = "Cheese"
             },
         };
-        PopulateAll();
     }
 
     public static List<Entity> Entities { get; set; }
-    public static List<Entity> TodayEntities { get; private set; } = new();
-    public static List<Entity> YesterdayEntities { get; private set; } = new();
-    public static void PopulateAll()
-    {
-        TodayEntities = GetRandomList(true);
-        YesterdayEntities = GetRandomList(false);
 
-
-    }
-
-    private static List<Entity> GetRandomList(bool today)
+    public static List<Entity> GetRandomList(DateTime fetchDatetime)
     {
         Random rnd1 = new();
 
@@ -55,7 +45,7 @@ public static class MockEntities
         entities.ForEach(e =>
         {
             e.Price = prices[rnd1.Next(0, prices.Length)];
-            e.FetchDate = today ? DateTime.Now : new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day - 1);
+            e.FetchDate = fetchDatetime;
         });
         return entities;
     }

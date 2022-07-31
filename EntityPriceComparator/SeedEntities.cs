@@ -34,7 +34,7 @@ public static class SeedEntities
         };
     }
 
-    public static List<Entity> Entities { get; set; }
+    private static List<Entity> Entities { get; }
 
     public static List<Entity> GetRandomList(DateTime fetchDatetime)
     {

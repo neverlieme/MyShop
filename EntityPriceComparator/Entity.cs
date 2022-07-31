@@ -7,7 +7,7 @@ public class Entity
     public string Description { get; set; }
     public double Price { get; set; }
     public DateTime FetchDate { get; set; }
-    public override string ToString() => $"{Name} \t\t {Price}";
+    public override string ToString() => $"{Name} \t\t\t {Price}";
 
 
 }

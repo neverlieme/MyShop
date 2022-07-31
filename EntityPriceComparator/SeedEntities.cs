@@ -31,6 +31,21 @@ public static class SeedEntities
                 EntityId = Guid.Parse("9626d94c-b086-4b5e-ae6e-316bcdcf7e05"),
                 Name = "Cheese"
             },
+            new()
+            {
+                EntityId = Guid.Parse("1948dcc2-10d7-11ed-861d-0242ac120002"),
+                Name = "Orange"
+            },
+            new()
+            {
+                EntityId = Guid.Parse("27ac07c6-10d7-11ed-861d-0242ac120002"),
+                Name = "Meat"
+            },
+            new()
+            {
+                EntityId = Guid.Parse("3dcee794-10d7-11ed-861d-0242ac120002"),
+                Name = "Snack"
+            },
         };
     }
 
@@ -41,7 +56,7 @@ public static class SeedEntities
         Random rnd1 = new();
 
         var prices = new double[] { 100, 150, 200, 250, 300, 350, 400, 450, 500, 550 };
-        var entities = Entities.OrderBy(_ => rnd1.Next()).Take(2).ToList();
+        var entities = Entities.OrderBy(_ => rnd1.Next()).Take(4).ToList();
         entities.ForEach(e =>
         {
             e.Price = prices[rnd1.Next(0, prices.Length)];

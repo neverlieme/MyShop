@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EntityPriceComparator
+﻿namespace EntityPriceComparator
 {
     internal class EntityComparatorService
     {
@@ -24,7 +18,7 @@ namespace EntityPriceComparator
             {
                 var next = i + 1;
                 var yesterdayItem = items[i];
-                var todayItem = next > items.Count-1 ? null : items[next];
+                var todayItem = next > items.Count - 1 ? null : items[next];
                 var entityState = GetEntityState(todayItem, yesterdayItem);
                 switch (entityState)
                 {

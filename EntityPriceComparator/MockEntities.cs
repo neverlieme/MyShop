@@ -6,27 +6,27 @@ public static class MockEntities
     {
         Entities = new List<Entity>
         {
-            new Entity
+            new()
             {
                 EntityId = Guid.Parse("bc5cf3f2-1630-4d67-a1a4-c1923f2e91f6"),
                 Name = "Milk"
             },
-            new Entity
+            new()
             {
                 EntityId = Guid.Parse("fba1aaaf-b572-4aa7-9c91-8f592938b14b"),
                 Name = "Tea"
             },
-            new Entity
+            new()
             {
                 EntityId = Guid.Parse("03cf9e8a-433e-49f3-ab47-c4ad2841786d"),
                 Name = "Chicken"
             },
-            new Entity
+            new()
             {
                 EntityId = Guid.Parse("b31123b5-b7bd-4b82-b4f2-6a126cfbeb28"),
                 Name = "Egg"
             },
-            new Entity
+            new()
             {
                 EntityId = Guid.Parse("9626d94c-b086-4b5e-ae6e-316bcdcf7e05"),
                 Name = "Cheese"
